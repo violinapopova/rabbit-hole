@@ -9,19 +9,6 @@ npm install
 npm run dev
 ```
 
-## GitHub Pages
-
-The repo includes a workflow (`.github/workflows/deploy-pages.yml`) that builds on every push to `main` and publishes the `dist` folder.
-
-1. Push this repo to GitHub (see your remote setup).
-2. In the repository: **Settings → Pages → Build and deployment**.
-3. Under **Source**, choose **GitHub Actions** (not “Deploy from a branch”).
-4. Push to `main` (or run the workflow manually under **Actions**). After it finishes, the site URL appears in the workflow run and in **Pages** settings.
-
-For a normal project repo, the app is served at `https://<username>.github.io/<repo>/`. The Vite `base` path is set automatically in CI from `GITHUB_REPOSITORY`. For a user/org site repo named `<username>.github.io`, assets use `/` as the base.
-
-To test a subpath build locally: `GITHUB_REPOSITORY=you/rabbit-hole npm run build && npm run preview`.
-
 ## 1. Core Tech Stack
 
 **React:** For the component-based architecture and state management.
@@ -52,3 +39,17 @@ To test a subpath build locally: `GITHUB_REPOSITORY=you/rabbit-hole npm run buil
 **Smoothness over Speed:** We used custom cubic-bezier easing and spring damping to make the interface feel "expensive" and deliberate.
 
 **Visual Hierarchy:** Large fluid typography (`12vw`) combined with a soft mint-green background to keep the focus on motion experiments.
+
+
+## GitHub Pages
+
+The repo includes a workflow (`.github/workflows/deploy-pages.yml`) that builds on every push to `main` and publishes the `dist` folder.
+
+1. Push this repo to GitHub (see your remote setup).
+2. In the repository: **Settings → Pages → Build and deployment**.
+3. Under **Source**, choose **GitHub Actions** (not “Deploy from a branch”).
+4. Push to `main` (or run the workflow manually under **Actions**). After it finishes, the site URL appears in the workflow run and in **Pages** settings.
+
+For a normal project repo, the app is served at `https://<username>.github.io/<repo>/`. The Vite `base` path is set automatically in CI from `GITHUB_REPOSITORY`. For a user/org site repo named `<username>.github.io`, assets use `/` as the base.
+
+To test a subpath build locally: `GITHUB_REPOSITORY=you/rabbit-hole npm run build && npm run preview`.
